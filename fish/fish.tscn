@@ -23,12 +23,11 @@ shape = SubResource("CapsuleShape2D_tg27l")
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("character", "_curr_state")]
 script = ExtResource("3_qlacr")
 character = NodePath("..")
-_curr_state = NodePath("IdleState")
+_curr_state = NodePath("SwimState")
 
 [node name="IdleState" type="Node" parent="StateMachine" node_paths=PackedStringArray("next_states")]
 script = ExtResource("4_ack63")
-next_states = [NodePath("../SwimState")]
+next_states = [null]
 
-[node name="SwimState" type="Node" parent="StateMachine" node_paths=PackedStringArray("next_states")]
+[node name="SwimState" type="Node" parent="StateMachine"]
 script = ExtResource("5_g3eqa")
-next_states = [NodePath("../IdleState")]

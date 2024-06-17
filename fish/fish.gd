@@ -3,7 +3,7 @@ extends CharacterBody2D
 
 class_name Fish
 
-var _target: Vector2
+var target: Vector2
 
 
 # Called when the node enters the scene tree for the first time.
@@ -13,6 +13,7 @@ func _ready():
 
 # Called every physics frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta) -> void:
+	target = get_global_mouse_position() - self.position
 	pass
 
 

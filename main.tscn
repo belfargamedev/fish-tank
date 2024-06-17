@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=3 uid="uid://kivl5o0qylny"]
+
+[ext_resource type="PackedScene" uid="uid://lvnqyopfs4o6" path="res://water_layer/water_layer.tscn" id="1_glk38"]
+[ext_resource type="PackedScene" uid="uid://nxlcg84j4gvs" path="res://ui/ui.tscn" id="1_tym0q"]
+[ext_resource type="PackedScene" uid="uid://ohrva0co4j3i" path="res://tank/tank.tscn" id="2_w6oij"]
+[ext_resource type="PackedScene" uid="uid://csqaa6nukhfrt" path="res://camera/camera.tscn" id="3_c2p5k"]
+[ext_resource type="PackedScene" uid="uid://cbkhrsll328rq" path="res://background/background.tscn" id="4_3c5tr"]
+
+[node name="Main" type="Node"]
+
+[node name="TankEnvironment" type="Node2D" parent="."]
+
+[node name="WaterLayer" parent="TankEnvironment" instance=ExtResource("1_glk38")]
+
+[node name="Tank" parent="TankEnvironment" instance=ExtResource("2_w6oij")]
+
+[node name="Camera" parent="TankEnvironment/Tank" instance=ExtResource("3_c2p5k")]
+position = Vector2(1220, -1205)
+zoom = Vector2(0.2, 0.2)
+
+[node name="UI" parent="." instance=ExtResource("1_tym0q")]
+
+[node name="Background" parent="." instance=ExtResource("4_3c5tr")]

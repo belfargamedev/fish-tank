@@ -34,5 +34,6 @@ void fragment()
 	vec4 color = vec4(1.0);
 	
 	color.rgb = mix(refraction.rgb, water_tint.rgb, water_tint.a);
+	color.a = refraction.a + water_tint.a;
 	COLOR = color;
 }

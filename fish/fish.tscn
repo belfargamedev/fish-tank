@@ -7,10 +7,12 @@
 [ext_resource type="Script" path="res://state_machine/states/swim.gd" id="5_g3eqa"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tg27l"]
-radius = 32.0
-height = 92.0
+radius = 45.0
+height = 120.0
 
 [node name="Fish" type="CharacterBody2D"]
+input_pickable = true
+motion_mode = 1
 script = ExtResource("1_osxe8")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

@@ -13,7 +13,6 @@ func _ready():
 
 # Called every physics frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta) -> void:
-	target = get_global_mouse_position() - self.position
 	pass
 
 
